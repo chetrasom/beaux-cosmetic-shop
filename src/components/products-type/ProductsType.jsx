@@ -13,11 +13,40 @@ import { Navigation } from 'swiper/modules';
 
 import { Heading } from '../../components';
 import ProductTypeCard from './ProductTypeCard';
+import { InfinitySpin } from 'react-loader-spinner'
 
 const ProductsType = () => {
-    const { products } = useSelector(selectorProducts);
+    const { products, products_status: status, products_error:error } = useSelector(selectorProducts);
 
     const newProducts = products.filter((product) => product?.attributes?.new_product === true);
+
+    let contentToDisplay;
+    if (status === 'loading') {
+        contentToDisplay = (
+            <div className='text-xl md:text-2xl text-center h-[380px] flex items-center justify-center'>
+                <InfinitySpin
+                    visible={true}
+                    width="200"
+                    color="#4fa94d"
+                    ariaLabel="infinity-spin-loading"
+                />
+            </div>
+        )
+    } else if (status === 'succeeded') {
+        contentToDisplay = newProducts.map((product) => {
+            return (
+                <SwiperSlide key={product.id}>
+                    <ProductTypeCard product={product} />
+                </SwiperSlide>
+            )
+        })
+    } else if (status === 'failed') {
+        contentToDisplay = (
+            <div className='bg-secondary text-xl md:text-2xl text-center h-[380px] flex items-center justify-center'>
+                <h4>{error}</h4>
+            </div>
+        )
+    }
 
     return (
         <section className='pb-10 lg:pb-[60px]'>
@@ -48,13 +77,7 @@ const ProductsType = () => {
                     }}
                     className='productsType'
                 >
-                    {newProducts.map((product) => {
-                        return (
-                            <SwiperSlide key={product.id}>
-                                <ProductTypeCard product={product} />
-                            </SwiperSlide>
-                        )
-                    })}
+                    {contentToDisplay}
                 </Swiper>
             </div>
         </section>
