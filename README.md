@@ -27,7 +27,7 @@
 - Timer Countdown
 - Authentication firebase
 
-👉 Live Demo: <a href='#'>Beaux Cosmetics Shop Demo</a>
+👉 Live Demo: <a href='https://beaux-cosmetic-shop.vercel.app/'>Beaux Cosmetics Shop Demo</a>
 
 ### Screenshots of the Project
 
