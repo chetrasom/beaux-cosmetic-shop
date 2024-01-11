@@ -27,8 +27,8 @@ const SignIn = () => {
     const navigate = useNavigate();
 
     const [formFields, setFormFields] = useState({
-        email: '',
-        password: '',
+        email: 'beauxcosmetic@gmail.com',
+        password: 'beaux168CosmeticShop',
     });
 
     const onChangeField = (e) => {
