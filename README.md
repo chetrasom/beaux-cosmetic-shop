@@ -32,20 +32,20 @@
 ### Screenshots of the Project
 
 <div align='center'>
-  <img src='./src/assets/images/homepage.png' alt="cover"/>
+  <img src='./src/assets/images/cover-1.png' alt="cover"/>
 </div>
 
-<div align='center'>
+<!-- <div align='center'>
   <img src='./src/assets/images/details.png' alt="cover"/>
-</div>
+</div> -->
 
-<div align='center'>
+<!-- <div align='center'>
   <img src='./src/assets/images/explore.png' alt="cover"/>
-</div>
+</div> -->
 
-<div align='center'>
+<!-- <div align='center'>
   <img src='./src/assets/images/search.png' alt="cover"/>
-</div>
+</div> -->
 
 <!-- <div align="left">
 
