@@ -1,0 +1,95 @@
+/* ------------------ Custom arrows products-type section slider ------------------ */
+
+/* Position inside swiper container */
+.productsType .swiper-button-next,
+.productsType .swiper-button-prev {
+    top: 40%;
+    /* right: inherit;
+    bottom: inherit;
+    left: inherit; */
+}
+
+/* Shape width, height */
+.productsType .swiper-button-next,
+.productsType .swiper-button-prev {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: #333333;
+    color: #FFF;
+    border-radius: 2px;
+    /* box-shadow: 0 4px 9px rgba(246, 179, 179, 0.05); */
+}
+
+/* Hover */
+.productsType .swiper-button-next:hover,
+.productsType .swiper-button-prev:hover {
+    background-color: #ffaf9b;
+    color: #333333;
+    transition: .25s;
+}
+
+/* Change size icon */
+.productsType .swiper-button-next::after,
+.productsType .swiper-button-prev::after {
+    font-size: 1rem;
+}
+
+/* Custom responsive */
+
+/* small screen padding inline swiper-slide */
+.productsType .swiper-slide {
+    padding-inline: 3.5rem;
+}
+
+@media (min-width: 768px) {
+    .productsType .swiper-slide {
+        padding-inline: 0;
+    }
+}
+
+/* ---------- BreadCrumb ---------- */
+.customBreadcrumb:before {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    /* z-index: -1; */
+    background: #fafafa;
+    opacity: .50;
+}
+
+/* ---------- flip-clock ---------- */
+/* styles.css */
+
+.flip-clock {
+    --fcc-flip-duration: 0.5s; /* transition duration when flip card */
+    --fcc-digit-block-width: 32px; /* width of digit card */
+    --fcc-digit-block-height: 60px; /* height of digit card, highly recommend in even number */
+    --fcc-digit-font-size: 30px; /* font size of digit */
+    --fcc-digit-color: #000; /* color of digit */
+    --fcc-label-font-size: 10px; /* font size of label */
+    --fcc-label-color: #ffffff; /* color of label */
+    --fcc-background: #fff; /* background of digit card */
+    --fcc-divider-color: white; /* color of divider */
+    --fcc-divider-height: 1px; /* height of divider */
+    --fcc-separator-size: 6px; /* size of colon */
+    --fcc-separator-color: #ffaf9b; /* color of colon */
+}
+
+@media (min-width: 768px) {
+    .flip-clock {
+        --fcc-digit-block-width: 32px; /* width of digit card */
+        --fcc-digit-font-size: 36px; /* font size of digit */
+    }
+}
+
+@media (min-width: 1024px) {
+    .flip-clock {
+        --fcc-digit-block-width: 52px; /* width of digit card */
+        --fcc-digit-block-height: 68px; /* height of digit card, highly recommend in even number */
+        --fcc-digit-font-size: 52px; /* font size of digit */
+    }
+}

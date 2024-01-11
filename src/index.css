@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* .color {
+    color: #feebe7;
+    color: #ffaf9b;
+    color: #333333;
+    color: #444444;
+    color: #ffffff;
+} */
+
+@layer base {
+    body {
+        @apply bg-white font-secondary text-accent-primary
+    }
+
+    h1, h2, h3, h4 {
+        @apply font-primary text-accent
+    }
+
+    .h1 {
+        @apply text-4xl md:text-4xl lg:text-6xl
+    }
+
+    .h2 {
+        @apply text-3xl md:text-3xl lg:text-4xl
+    }
+
+    .h3 {
+        @apply text-2xl
+    }
+
+    .section {
+        @apply py-10 lg:py-[60px]
+    }
+
+    /* width */
+    .horizontalCard::-webkit-scrollbar {
+        @apply w-[5px]
+    }
+    
+    /* Track */
+    .horizontalCard::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+    
+    /* Handle */
+    .horizontalCard::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius: 5px;
+    }
+    
+    /* Handle on hover */
+    .horizontalCard::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+
+}
