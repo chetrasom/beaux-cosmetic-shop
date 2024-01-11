@@ -114,6 +114,17 @@ const ProductItem = ({ cartItem }) => {
                             >
                                 {cartItem?.name}
                             </Link>
+
+                            <div>
+                                <button 
+                                    aria-label='delete item'
+                                    onClick={() => dispatch(removeItem(id))}
+                                    className='flex items-center gap-x-1 text-red-500 hover:text-primary transition-all'
+                                >
+                                    {/* <span>Delete</span>  */}
+                                    <MdDeleteForever className='w-7 h-7' />
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
