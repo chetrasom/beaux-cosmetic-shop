@@ -1,16 +1,16 @@
+import { Link } from "react-router-dom";
 import { SlLocationPin, SlClock, SlPhone,  } from "react-icons/sl";
 import { 
     IoMailOutline, IoChevronForward, 
     IoLogoTwitter ,IoLogoFacebook, IoLogoInstagram, IoLogoYoutube 
 } from "react-icons/io5";
-import { Link } from "react-router-dom";
+import Credit from "../Credit";
 
 const Footer = () => {
     return (
-        <footer className="bg-accent text-white py-[50px] md:py-[75px] lg:py-[100px]">
+        <footer className="bg-accent text-white py-[50px] md:pt-[75px] lg:pt-[100px]">
             <div className="container">
                 <div className="grid grid-cols-1 gap-y-8 md:grid-cols-2 lg:grid-cols-4 lg:gap-x-6">
-
                     <div>
                         <h3 className="uppercase text-white text-xl pb-4 lg:pb-6">our store location</h3>
                         <div className="space-y-2">
@@ -89,8 +89,9 @@ const Footer = () => {
                         </div>
                     </div>
                 </div>
-            </div>
 
+                <Credit />
+            </div>
         </footer>
     )
 }
