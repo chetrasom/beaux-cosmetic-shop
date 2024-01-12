@@ -32,10 +32,9 @@ const Shop = () => {
             </div>
 
             <section className='container pt-10 pb-10'>
+
                 <div className='flex items-start justify-between gap-x-6'>
-
                     <Filters data={products} />
-
                     {/* ----------------------------------------------------- */}
                     <div className='flex-1'>
 
@@ -77,8 +76,7 @@ const Shop = () => {
                         {/* <ProductsPagination />    */}
                         
                     </div>
-
-                </div>
+                </div> 
             </section>
         </>
     )

@@ -24,12 +24,15 @@ const BestSellers = () => {
     if (status === 'loading') {
         contentToDisplay = (
             <div className='text-xl md:text-2xl text-center h-[380px] flex items-center justify-center'>
-                <InfinitySpin
-                    visible={true}
-                    width="200"
-                    color="#4fa94d"
-                    ariaLabel="infinity-spin-loading"
-                />
+                <div>
+                    <InfinitySpin
+                        visible={true}
+                        width="200"
+                        color="#4fa94d"
+                        ariaLabel="infinity-spin-loading"
+                    />
+                    <span className='text-xl text-stone-500'>Please wait...</span>
+                </div>
             </div>
         )
     } else if (status === 'succeeded') {
