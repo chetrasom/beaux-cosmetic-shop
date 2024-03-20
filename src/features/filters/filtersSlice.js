@@ -76,6 +76,7 @@ const filtersSlice = createSlice({
         },
         filtersProducts: (state) => {
             const { all_products } = state;
+            // const { text, product_type, brand, price, shipping } = state.filters;
             const { text, product_type, brand, price, shipping } = state.filters;
 
             let tempProducts = [...all_products];
@@ -100,6 +101,7 @@ const filtersSlice = createSlice({
             if (brand !== 'all') {
                 tempProducts = tempProducts.filter((product) => {
                     return product?.attributes?.brand === brand
+                    // return product?.attributes?.category?.data?.attributes?.name === brand
                 })
             }
 

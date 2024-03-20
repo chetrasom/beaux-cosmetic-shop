@@ -9,6 +9,8 @@ const ListCard = ({ product: { attributes: p } }) => {
     const coverImage = p?.images?.data[0]?.attributes?.url;
     const behindImage = p?.images?.data[1]?.attributes?.url;
 
+    // console.log(p?.description[0]?.children[0]?.text);
+
     return (
         <div className='border-l-2 border-primary/60 rounded-sm overflow-hidden shadow-sm'>
             <div className='flex flex-col md:flex-row md:items-center'>
@@ -69,7 +71,10 @@ const ListCard = ({ product: { attributes: p } }) => {
                             <h4 className='font-secondary'>{formatPrice(p?.price)}</h4>
                         )}
 
-                        <p className='text-[15px] text-stone-500 leading-relaxed'>{p?.description}</p>
+                        <p className='text-[15px] text-stone-500 leading-relaxed'>
+                            {p?.description[0]?.children[0]?.text}
+                        </p> 
+                       
                     </div>
                 </div>
 

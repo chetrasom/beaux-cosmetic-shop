@@ -49,7 +49,8 @@ const SingleDetail = () => {
         )
     }
 
-    // console.log(single_product[0]?.attributes);
+    // console.log(single_product[0]?.attributes?.description[0]?.children[0].text);
+    console.log(single_product);
 
     return (
         <>
@@ -83,10 +84,10 @@ const SingleDetail = () => {
                         <Content 
                             name={single_product[0]?.attributes?.name}
                             stars={single_product[0]?.attributes?.stars}
-                            description={single_product[0]?.attributes?.description}
                             reviews={single_product[0]?.attributes?.reviews}
                             price={single_product[0]?.attributes?.price}
                             discountPrice={single_product[0]?.attributes?.discountPrice}
+                            description={single_product[0]?.attributes?.description[0]?.children[0].text}
                             saving={single_product[0]?.attributes?.saving}
                             stock={single_product[0]?.attributes?.stock}
                             single_product={single_product[0]?.attributes}

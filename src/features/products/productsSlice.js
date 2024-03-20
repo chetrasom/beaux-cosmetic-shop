@@ -23,7 +23,7 @@ export const fetchProducts = createAsyncThunk('products/fetchProducts', async (e
     return result?.data;
 });
 
-export const fetchSingleProduct = createAsyncThunk('', async (endpoint) => {
+export const fetchSingleProduct = createAsyncThunk('singleProduct/fetchSingleProduct', async (endpoint) => {
     const response = await axios.get(`${API_URL}${endpoint}`, {
         headers: {
             authorization: 'Bearer ' + STRAPI_API_TOKEN,

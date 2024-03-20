@@ -56,7 +56,8 @@ const cartSlice = createSlice({
                     image: product?.images.data[0].attributes.url,
                     price: product?.price,
                     maxStock: product?.stock,
-                    category: product?.categories.data[0].attributes.name
+                    // newCategory: product?.categories.data[0].attributes.name
+                    newCategory: product?.category?.data?.attributes?.name
                 }
 
                 // return

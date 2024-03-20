@@ -17,7 +17,8 @@ const FiltersMobile = ({ data }) => {
         filters: {
             text,
             product_type,
-            brand,
+            // brand,
+            // category,
             min_price,
             max_price,
             price,
@@ -28,7 +29,7 @@ const FiltersMobile = ({ data }) => {
 
     // getUniqueValues product_type
     const productsType = getUniqueValues(all_products, 'product_type');
-    const brands = getUniqueValues(all_products, 'brand');
+    // const brands = getUniqueValues(all_products, 'brand');
 
     const updateFiltersHandler = (e) => {
         let name = e.target.name;
@@ -134,7 +135,7 @@ const FiltersMobile = ({ data }) => {
                             <h5 className="font-primary text-lg tracking-wider border-l-2 border-primary pl-4">
                                 Brand
                             </h5>
-                            <div className='flex flex-wrap gap-2'>
+                            {/* <div className='flex flex-wrap gap-2'>
                                 {brands.map((item, index) => {
                                     return (
                                         <button
@@ -150,7 +151,7 @@ const FiltersMobile = ({ data }) => {
                                         </button>
                                     )
                                 })}
-                            </div>
+                            </div> */}
                         </li>
 
                         {/* Price */}

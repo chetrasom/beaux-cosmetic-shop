@@ -40,7 +40,7 @@ const CartSidebarItem = ({ cartItem }) => {
                     <div className="flex items-start justify-between gap-x-4 px-2">
                         <div>
                             <p className='uppercase text-xs text-accent-primary tracking-wider'>
-                                {cartItem?.category}
+                                {cartItem?.newCategory}
                             </p>
                             <Link 
                                 to={`/shop/${cartItem?.id}`} 

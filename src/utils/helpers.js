@@ -28,7 +28,7 @@ export const shuffleArray = (array) => {
 
 export const getUniqueValues = (data, type) => {
     // let unique = data.map((item) => item[type])
-    let unique = data.map((item) => item?.attributes[type])
+    let unique = data.map((item) => item?.attributes[type]);
     if (type === 'colors') {
       unique = unique.flat()
     }

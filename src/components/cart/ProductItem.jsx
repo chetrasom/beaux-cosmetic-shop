@@ -35,8 +35,9 @@ const ProductItem = ({ cartItem }) => {
                             />
                         </div>
                         <div>
+                            {/* category */}
                             <p className='uppercase text-xs text-primary tracking-wider'>
-                                {cartItem?.category}
+                                {cartItem?.newCategory}
                             </p>
 
                             <div className='pb-1'>

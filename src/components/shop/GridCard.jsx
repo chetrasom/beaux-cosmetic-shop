@@ -22,6 +22,15 @@ const GridCard = ({ product: { attributes: p } }) => {
                     alt={p?.name}
                     className='absolute top-0 left-0 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:scale-110 ease-in transition-all duration-200'
                 />
+
+                {p?.saving > 0 && (
+                    <div className='absolute top-3 left-3'>
+                        <div className='font-secondary bg-[#FFD700] rounded-sm text-xs px-2.5 py-2'>
+                            {`Save ${p?.saving} %`}
+                        </div>
+                    </div>
+                )}
+
                 {/* Add to cart icon */}
                 {/* <div className='absolute inset-0 z-10 flex items-center justify-center opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:ease-in group-hover:transition-all group-hover:duration-300'>
                     <div className='flex items-start gap-x-2'>

@@ -55,7 +55,7 @@ const ThumbsGallerySlide = ({ images, thumbnail }) => {
                 className="mySwiper"
                 
             >
-                {thumbnail?.map((slide, index) => {
+                {images?.map((slide, index) => {
                     return (
                         <SwiperSlide key={index}>
                             <img 
@@ -74,5 +74,5 @@ export default ThumbsGallerySlide;
 
 ThumbsGallerySlide.propTypes = {
     images : PropTypes.array,
-    thumbnail : PropTypes.array
+    thumbnail : PropTypes.any
 }

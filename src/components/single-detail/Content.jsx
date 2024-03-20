@@ -175,6 +175,6 @@ Content.propTypes = {
     discountPrice: PropTypes.number, 
     saving: PropTypes.number,
     stock: PropTypes.number,
-    description: PropTypes.string,
+    description: PropTypes.any,
     single_product: PropTypes.any
 }
